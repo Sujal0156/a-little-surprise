@@ -1,33 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<title>A Small Surprise</title>
+<meta charset="UTF-8">
+<title>For Sweetu</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<audio autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="hearts">
+<span>❤️</span>
+<span>💖</span>
+<span>💕</span>
+<span>💗</span>
+<span>💘</span>
+</div>
+
 <div class="container">
 
-<h1>Hey Sweetu 😊</h1>
+<h1 class="title">Hey Sweetu 💖</h1>
 
 <p class="message">
-I have wrote something for you.<br><br>
-It's nothing big…<br>
-but I wanted you to see it.
+I made something small for you...<br><br>
+It's just a tiny surprise,<br>
+but I hope it makes you smile 😊
 </p>
 
-<a href="surprise.html">
-<button class="btn">Open Your Surprise ❤️</button>
-</a>
-
-<p class="footer">
-Just a little effort for someone special.
-</p>
+<div class="envelope" onclick="openLetter()">
+💌
+<p>Tap to open your letter</p>
+</div>
 
 </div>
 
-</body>
+<script>
+function openLetter(){
+window.location.href="surprise.html";
+}
+</script>
 
+</body>
 </html>
