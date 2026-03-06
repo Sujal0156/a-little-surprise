@@ -9,9 +9,15 @@
 
 <body>
 
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
 <div class="background"></div>
 
 <div class="hearts"></div>
+
+<canvas id="sparkles"></canvas>
 
 <div class="container">
 
@@ -32,15 +38,15 @@ but I hope it makes you smile today 😊
 
 <script>
 
-function openLetter(){
-window.location.href="surprise.html";
-}
+// MUSIC START
+document.body.addEventListener("click",()=>{
+document.getElementById("music").play();
+},{once:true});
 
-// Generate floating hearts dynamically
-
+// HEART GENERATOR
 const heartsContainer = document.querySelector(".hearts");
 
-for(let i=0;i<25;i++){
+for(let i=0;i<30;i++){
 
 let heart=document.createElement("span");
 heart.innerHTML="❤️";
@@ -52,6 +58,75 @@ heart.style.fontSize=(15+Math.random()*25)+"px";
 heartsContainer.appendChild(heart);
 
 }
+
+// HEART EXPLOSION
+function openLetter(){
+
+for(let i=0;i<15;i++){
+
+let heart=document.createElement("div");
+heart.innerHTML="💖";
+heart.className="explode";
+
+heart.style.left="50%";
+heart.style.top="60%";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),1000);
+
+}
+
+setTimeout(()=>{
+window.location.href="surprise.html";
+},700);
+
+}
+
+
+// SPARKLES FOLLOW MOUSE
+const canvas = document.getElementById("sparkles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles=[];
+
+document.addEventListener("mousemove",(e)=>{
+
+particles.push({
+x:e.clientX,
+y:e.clientY,
+size:3,
+life:60
+});
+
+});
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+particles.forEach((p,i)=>{
+
+ctx.fillStyle="white";
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+ctx.fill();
+
+p.life--;
+p.size*=0.96;
+
+if(p.life<=0) particles.splice(i,1);
+
+});
+
+requestAnimationFrame(animate);
+
+}
+
+animate();
 
 </script>
 
