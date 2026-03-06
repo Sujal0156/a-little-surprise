@@ -9,7 +9,7 @@ align-items:center;
 overflow:hidden;
 }
 
-/* Animated background */
+/* BACKGROUND */
 
 .background{
 position:fixed;
@@ -18,7 +18,7 @@ height:100%;
 background:linear-gradient(270deg,#ff9a9e,#fad0c4,#ffdde1,#ffc3a0);
 background-size:800% 800%;
 animation:gradientMove 15s ease infinite;
-z-index:-2;
+z-index:-3;
 }
 
 @keyframes gradientMove{
@@ -27,20 +27,20 @@ z-index:-2;
 100%{background-position:0% 50%}
 }
 
-/* Glass card */
+/* GLASS CARD */
 
 .container{
 text-align:center;
 padding:60px;
 border-radius:25px;
-backdrop-filter:blur(15px);
+backdrop-filter:blur(20px);
 background:rgba(255,255,255,0.25);
-box-shadow:0 15px 40px rgba(0,0,0,0.25);
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
 max-width:450px;
-animation:fadeIn 2s ease;
+z-index:5;
 }
 
-/* Title */
+/* TITLE */
 
 .title{
 font-size:45px;
@@ -48,7 +48,7 @@ color:#ff2e63;
 margin-bottom:20px;
 }
 
-/* Message */
+/* MESSAGE */
 
 .message{
 font-size:19px;
@@ -57,52 +57,37 @@ line-height:1.7;
 margin-bottom:40px;
 }
 
-/* Envelope */
+/* ENVELOPE */
 
 .envelope{
-font-size:60px;
+font-size:65px;
 cursor:pointer;
-transition:0.3s;
 animation:bounce 2s infinite;
-}
-
-.envelope p{
-font-size:17px;
-margin-top:10px;
-color:#ff2e63;
+transition:0.3s;
 }
 
 .envelope:hover{
 transform:scale(1.2);
 }
 
-/* Bounce animation */
+.envelope p{
+font-size:17px;
+color:#ff2e63;
+}
+
+/* BOUNCE */
 
 @keyframes bounce{
 0%,100%{transform:translateY(0)}
-50%{transform:translateY(-10px)}
+50%{transform:translateY(-12px)}
 }
 
-/* Fade */
-
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-/* Floating hearts */
+/* FLOATING HEARTS */
 
 .hearts span{
 position:absolute;
 bottom:-50px;
 animation:float linear infinite;
-opacity:0.8;
 }
 
 @keyframes float{
@@ -121,4 +106,39 @@ transform:translateY(-120vh);
 opacity:0;
 }
 
+}
+
+/* HEART EXPLOSION */
+
+.explode{
+position:absolute;
+font-size:30px;
+animation:boom 1s ease forwards;
+}
+
+@keyframes boom{
+
+0%{
+transform:scale(1);
+opacity:1;
+}
+
+100%{
+transform:translate(
+calc(-200px + 400px * random()),
+calc(-200px + 400px * random())
+) scale(0);
+opacity:0;
+}
+
+}
+
+/* SPARKLES CANVAS */
+
+#sparkles{
+position:fixed;
+top:0;
+left:0;
+pointer-events:none;
+z-index:2;
 }
