@@ -80,9 +80,26 @@ color:#ff2e63;
 
 /* BOUNCE */
 
-@keyframes bounce{
-0%,100%{transform:translateY(0)}
-50%{transform:translateY(-12px)}
+@keyframes floatUp{
+
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+50%{
+transform:translateY(-50vh) rotate(180deg);
+}
+
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+
 }
 
 /* FLOATING HEARTS */
@@ -99,10 +116,10 @@ z-index:0;
 
 .hearts span{
 position:absolute;
-bottom:-60px;
-animation:float linear infinite;
+bottom:-80px;
+animation:floatUp linear infinite;
 opacity:0.9;
-filter:drop-shadow(0 0 8px rgba(255,50,120,0.5));
+pointer-events:none;
 }
 
 .hearts span:nth-child(3n){
