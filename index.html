@@ -44,18 +44,22 @@ document.getElementById("music").play();
 },{once:true});
 
 // HEART GENERATOR
-const heartsContainer = document.querySelector(".hearts");
+const itemsContainer = document.querySelector(".hearts");
 
-for(let i=0;i<30;i++){
+const items = ["❤️","💖","💕","🌹","🍫"];
 
-let heart=document.createElement("span");
-heart.innerHTML="❤️";
+for(let i=0;i<45;i++){
 
-heart.style.left=Math.random()*100+"%";
-heart.style.animationDuration=(5+Math.random()*10)+"s";
-heart.style.fontSize=(15+Math.random()*25)+"px";
+let item=document.createElement("span");
 
-heartsContainer.appendChild(heart);
+item.innerHTML = items[Math.floor(Math.random()*items.length)];
+
+item.style.left = Math.random()*100 + "%";
+item.style.animationDuration = (6 + Math.random()*10) + "s";
+item.style.fontSize = (18 + Math.random()*30) + "px";
+item.style.animationDelay = Math.random()*5 + "s";
+
+itemsContainer.appendChild(item);
 
 }
 
