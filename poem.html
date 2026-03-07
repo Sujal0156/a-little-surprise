@@ -68,7 +68,8 @@
 </a>
 
 </div>
-<script>
+
+  <script>
 
 const lines = document.querySelectorAll(".poem-text p");
 
@@ -79,16 +80,22 @@ function showNextLine(){
 if(i < lines.length){
 
 lines[i].style.opacity = "1";
+lines[i].style.transform = "translateY(0)";
 
 i++;
 
-setTimeout(showNextLine, 800);
+setTimeout(showNextLine,700);
 
 }
 
 }
 
-window.onload = showNextLine;
+window.onload = () => {
+
+setTimeout(showNextLine,900);
+
+};
 
 </script>
+  
 </body>
