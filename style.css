@@ -158,91 +158,153 @@ transform:translateY(0);
 
 }
 
-
-
 /* ========================= */
 /* POEM PAGE */
 /* ========================= */
+
+/* center the poem page */
+
+.poem-page{
+
+margin:0;
+
+font-family:'Poppins', sans-serif;
+
+background:linear-gradient(135deg,#ffd1dc,#ffe6f0);
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:40px;
+
+}
+
+
+/* poem card */
 
 .poem-container{
 
 background:white;
 
 max-width:700px;
+width:100%;
 
-margin:80px auto;
+padding:70px 60px;
 
-padding:60px;
+border-radius:24px;
 
-border-radius:22px;
+text-align:center;
 
 box-shadow:
-0 20px 40px rgba(0,0,0,0.15),
-0 5px 15px rgba(0,0,0,0.08);
+0 25px 50px rgba(0,0,0,0.18),
+0 10px 25px rgba(0,0,0,0.08);
 
 animation:fadeIn 1.4s ease;
 
 }
 
 
-.poem-title{
+/* poem title */
+
+.poem-container h1{
 
 font-family:'Dancing Script',cursive;
-font-size:50px;
 
-text-align:center;
+font-size:54px;
 
 color:#ff4d6d;
 
-margin-bottom:40px;
+margin-bottom:35px;
+
+text-shadow:0 4px 12px rgba(255,77,109,0.25);
 
 }
 
 
-.poem p{
+/* poem lines */
+
+.poem-text p{
 
 font-size:20px;
 
-line-height:1.9;
+line-height:2;
 
 text-align:center;
 
 color:#444;
 
-margin:8px 0;
+margin:6px 0;
 
 opacity:0;
-animation:appear 1s forwards;
 
 }
 
 
-/* smoother poem timing */
+/* spacing between sections */
 
-.poem p:nth-child(1){animation-delay:0.3s;}
-.poem p:nth-child(2){animation-delay:0.6s;}
-.poem p:nth-child(3){animation-delay:0.9s;}
-.poem p:nth-child(4){animation-delay:1.2s;}
-.poem p:nth-child(5){animation-delay:1.5s;}
-.poem p:nth-child(6){animation-delay:1.8s;}
-.poem p:nth-child(7){animation-delay:2.1s;}
-.poem p:nth-child(8){animation-delay:2.4s;}
-.poem p:nth-child(9){animation-delay:2.7s;}
-.poem p:nth-child(10){animation-delay:3s;}
-
-
-@keyframes appear{
-from{
-opacity:0;
-transform:translateY(10px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+.poem-text br{
+display:block;
+margin:14px 0;
 }
 
 
+/* next button */
+
+.nextBtn{
+
+margin-top:40px;
+
+padding:16px 38px;
+
+border:none;
+
+border-radius:40px;
+
+background:linear-gradient(135deg,#ff4d6d,#ff1f4b);
+
+color:white;
+
+font-size:17px;
+font-weight:500;
+
+cursor:pointer;
+
+transition:all .35s ease;
+
+box-shadow:0 10px 25px rgba(255,77,109,0.45);
+
+}
+
+
+.nextBtn:hover{
+
+transform:translateY(-4px) scale(1.05);
+
+box-shadow:0 18px 35px rgba(255,77,109,0.55);
+
+}
+
+
+/* mobile support */
+
+@media (max-width:600px){
+
+.poem-container{
+padding:45px 25px;
+}
+
+.poem-container h1{
+font-size:40px;
+}
+
+.poem-text p{
+font-size:18px;
+}
+
+}
 
 /* next button */
 
