@@ -155,12 +155,21 @@ box-shadow:
 0 30px 60px rgba(0,0,0,0.18),
 0 10px 25px rgba(0,0,0,0.08);
 
-transform-origin:left center;
-transform:perspective(1200px) rotateY(-90deg);
-
-animation:openBook 1.4s ease forwards;
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
 
 }
+
+/* when card becomes visible */
+
+.poem-container.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
 /* book open effect */
 
 @keyframes openBook{
