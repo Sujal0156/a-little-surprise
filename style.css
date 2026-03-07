@@ -271,3 +271,27 @@ font-size:18px;
 }
 
 }
+
+/* poem card opening animation */
+
+.poem-card{
+
+transform-origin:left;
+
+animation:openLetter 1s ease forwards;
+
+}
+
+@keyframes openLetter{
+
+0%{
+transform:rotateY(-80deg);
+opacity:0;
+}
+
+100%{
+transform:rotateY(0deg);
+opacity:1;
+}
+
+}
