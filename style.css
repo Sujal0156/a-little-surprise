@@ -13,6 +13,22 @@ justify-content:center;
 align-items:center;
 }
 
+.heart{
+font-size:28px;
+margin-bottom:10px;
+animation:heartbeat 1.8s infinite;
+}
+
+@keyframes heartbeat{
+
+0%{transform:scale(1);}
+25%{transform:scale(1.1);}
+50%{transform:scale(1);}
+75%{transform:scale(1.1);}
+100%{transform:scale(1);}
+
+}
+
 /* animated background */
 
 @keyframes bgMove{
@@ -47,10 +63,11 @@ animation:fadeIn 1.5s ease;
 
 h1{
 font-family:'Dancing Script', cursive;
-font-size:56px;
+font-size:60px;
 color:#ff4d6d;
-margin-bottom:12px;
+margin-bottom:10px;
 letter-spacing:1px;
+text-shadow:0 4px 10px rgba(255,77,109,0.25);
 }
 
 
@@ -59,9 +76,10 @@ letter-spacing:1px;
 .intro{
 font-size:18px;
 color:#555;
-line-height:1.7;
+line-height:1.8;
 max-width:420px;
-margin:auto;
+margin:15px auto 0 auto;
+font-weight:300;
 }
 
 
@@ -69,14 +87,15 @@ margin:auto;
 
 .startBtn{
 
-margin-top:32px;
+margin-top:35px;
 
-padding:14px 34px;
+padding:15px 36px;
 
 border:none;
-border-radius:30px;
+border-radius:35px;
 
-background:#ff4d6d;
+background:linear-gradient(135deg,#ff4d6d,#ff1f4b);
+
 color:white;
 
 font-size:17px;
@@ -84,22 +103,44 @@ font-weight:500;
 
 cursor:pointer;
 
-transition:all .3s ease;
+transition:all .35s ease;
 
-box-shadow:0 8px 18px rgba(255,77,109,0.35);
+box-shadow:0 10px 22px rgba(255,77,109,0.4);
 
 }
 
 .startBtn:hover{
 
-transform:translateY(-3px) scale(1.05);
+transform:translateY(-4px) scale(1.05);
 
-background:#ff1f4b;
-
-box-shadow:0 12px 24px rgba(255,77,109,0.5);
+box-shadow:0 16px 30px rgba(255,77,109,0.55);
 
 }
 
+.sparkle{
+position:fixed;
+font-size:18px;
+animation:sparkleMove 6s linear infinite;
+opacity:0.6;
+}
+
+@keyframes sparkleMove{
+
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-10vh);
+opacity:0;
+}
+
+}
 
 /* fade animation */
 
