@@ -1,120 +1,79 @@
-/* background */
+/* HOME PAGE */
 
 body{
 margin:0;
 font-family:'Poppins', sans-serif;
-background:linear-gradient(135deg,#ffd1dc,#ffe6f0,#ffd1dc);
-background-size:300% 300%;
-animation:bgMove 12s ease infinite;
+background:linear-gradient(135deg,#ffd1dc,#ffe6f0);
 
 height:100vh;
+
 display:flex;
 justify-content:center;
 align-items:center;
 }
 
-.heart{
-font-size:28px;
-margin-bottom:10px;
-animation:heartbeat 1.8s infinite;
-}
+/* center card */
 
-@keyframes heartbeat{
-
-0%{transform:scale(1);}
-25%{transform:scale(1.1);}
-50%{transform:scale(1);}
-75%{transform:scale(1.1);}
-100%{transform:scale(1);}
-
-}
-
-/* animated background */
-
-@keyframes bgMove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
-
-
-/* main card */
-
-.container{
-
-background:white;
-padding:60px;
-border-radius:22px;
+.home-container{
 
 text-align:center;
-max-width:550px;
-width:90%;
 
-box-shadow:
-0 20px 40px rgba(0,0,0,0.15),
-0 5px 15px rgba(0,0,0,0.08);
+background:white;
 
-animation:fadeIn 1.5s ease;
+padding:60px 70px;
+
+border-radius:20px;
+
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+
+max-width:500px;
 
 }
-
 
 /* title */
 
-h1{
+.home-container h1{
 font-family:'Dancing Script', cursive;
 font-size:60px;
 color:#ff4d6d;
 margin-bottom:10px;
-letter-spacing:1px;
-text-shadow:0 4px 10px rgba(255,77,109,0.25);
 }
-
 
 /* intro text */
 
 .intro{
 font-size:18px;
 color:#555;
-line-height:1.8;
-max-width:420px;
-margin:15px auto 0 auto;
-font-weight:300;
+line-height:1.7;
 }
-
 
 /* button */
 
 .startBtn{
 
-margin-top:35px;
+margin-top:30px;
 
-padding:15px 36px;
+padding:14px 32px;
 
 border:none;
-border-radius:35px;
 
-background:linear-gradient(135deg,#ff4d6d,#ff1f4b);
+border-radius:30px;
+
+background:#ff4d6d;
 
 color:white;
 
-font-size:17px;
-font-weight:500;
+font-size:16px;
 
 cursor:pointer;
 
-transition:all .35s ease;
-
-box-shadow:0 10px 22px rgba(255,77,109,0.4);
+transition:0.3s;
 
 }
 
 .startBtn:hover{
-
-transform:translateY(-4px) scale(1.05);
-
-box-shadow:0 16px 30px rgba(255,77,109,0.55);
-
+transform:scale(1.08);
+background:#ff1f4b;
 }
 
 .sparkle{
