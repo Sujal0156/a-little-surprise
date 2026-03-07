@@ -162,12 +162,9 @@ transform:translateY(0);
 /* POEM PAGE */
 /* ========================= */
 
-/* center the poem page */
-
 .poem-page{
 
 margin:0;
-
 font-family:'Poppins', sans-serif;
 
 background:linear-gradient(135deg,#ffd1dc,#ffe6f0);
@@ -189,7 +186,7 @@ padding:40px;
 
 background:white;
 
-max-width:700px;
+max-width:750px;
 width:100%;
 
 padding:70px 60px;
@@ -199,7 +196,7 @@ border-radius:24px;
 text-align:center;
 
 box-shadow:
-0 25px 50px rgba(0,0,0,0.18),
+0 30px 60px rgba(0,0,0,0.18),
 0 10px 25px rgba(0,0,0,0.08);
 
 animation:fadeIn 1.4s ease;
@@ -207,24 +204,32 @@ animation:fadeIn 1.4s ease;
 }
 
 
-/* poem title */
+/* title */
 
 .poem-container h1{
 
 font-family:'Dancing Script',cursive;
 
-font-size:54px;
+font-size:56px;
 
 color:#ff4d6d;
 
-margin-bottom:35px;
+margin-bottom:40px;
 
-text-shadow:0 4px 12px rgba(255,77,109,0.25);
+text-shadow:0 5px 15px rgba(255,77,109,0.25);
 
 }
 
 
-/* poem lines */
+/* poem text */
+
+.poem-text{
+
+max-width:520px;
+margin:auto;
+
+}
+
 
 .poem-text p{
 
@@ -232,24 +237,73 @@ font-size:20px;
 
 line-height:2;
 
-text-align:center;
-
 color:#444;
 
 margin:6px 0;
 
 opacity:0;
 
+transform:translateY(10px);
+
+transition:all .5s ease;
+
 }
 
 
-/* spacing between sections */
+/* next button */
 
-.poem-text br{
-display:block;
-margin:14px 0;
+.nextBtn{
+
+margin-top:45px;
+
+padding:16px 38px;
+
+border:none;
+
+border-radius:40px;
+
+background:linear-gradient(135deg,#ff4d6d,#ff1f4b);
+
+color:white;
+
+font-size:17px;
+font-weight:500;
+
+cursor:pointer;
+
+transition:all .35s ease;
+
+box-shadow:0 12px 28px rgba(255,77,109,0.45);
+
 }
 
+
+.nextBtn:hover{
+
+transform:translateY(-4px) scale(1.05);
+
+box-shadow:0 18px 35px rgba(255,77,109,0.55);
+
+}
+
+
+/* mobile */
+
+@media (max-width:600px){
+
+.poem-container{
+padding:45px 25px;
+}
+
+.poem-container h1{
+font-size:42px;
+}
+
+.poem-text p{
+font-size:18px;
+}
+
+}
 
 /* next button */
 
