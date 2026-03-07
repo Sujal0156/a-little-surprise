@@ -1,64 +1,82 @@
-/* POEM PAGE */
+body{
 
-.poem-page{
-
-background: linear-gradient(135deg,#ffd1dc,#ffe6f0);
-
-min-height:100vh;
+margin:0;
+height:100vh;
 
 display:flex;
 justify-content:center;
 align-items:center;
 
-padding:40px;
+background:linear-gradient(135deg,#ffd1dc,#ffe6f0);
 
-font-family: 'Poppins', sans-serif;
+font-family:'Poppins',sans-serif;
 
 }
 
-.poem-container{
+/* floating emojis */
+
+.decorations{
+
+position:fixed;
+
+top:10px;
+width:100%;
+
+text-align:center;
+
+font-size:28px;
+
+opacity:0.8;
+
+}
+
+/* main card */
+
+.container{
 
 background:white;
-
-max-width:650px;
-width:90%;
 
 padding:50px;
 
 border-radius:20px;
 
-box-shadow:0 15px 40px rgba(0,0,0,0.15);
-
 text-align:center;
 
-max-height:80vh;
-overflow-y:auto;
+max-width:500px;
+
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
 
 }
 
-.poem-container h1{
+/* title */
 
-font-size:45px;
+h1{
+
+font-family:'Dancing Script',cursive;
+
+font-size:50px;
 
 color:#ff4d6d;
 
-margin-bottom:30px;
+margin-bottom:20px;
 
 }
 
-.poem-text p{
+/* intro text */
 
-font-size:20px;
+.intro{
 
-line-height:1.8;
+font-size:18px;
 
-margin:5px 0;
+line-height:1.7;
 
 color:#444;
 
 }
 
-.nextBtn{
+/* button */
+
+.startBtn{
 
 margin-top:30px;
 
@@ -80,7 +98,7 @@ transition:0.3s;
 
 }
 
-.nextBtn:hover{
+.startBtn:hover{
 
 transform:scale(1.1);
 
