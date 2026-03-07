@@ -12,61 +12,6 @@
 
 <body>
 
-<div class="floating-container"></div>
-
-<script>
-
-const container = document.querySelector(".floating-container");
-
-const items = ["❤️","🌹","🍫"];
-
-function createItem(){
-
-const el = document.createElement("div");
-
-el.classList.add("floating-item");
-
-el.innerHTML = items[Math.floor(Math.random()*items.length)];
-
-const startSide = Math.floor(Math.random()*4);
-
-let x = 0;
-let y = 0;
-
-if(startSide === 0){ // bottom
-x = Math.random()*100;
-y = 110;
-}
-if(startSide === 1){ // top
-x = Math.random()*100;
-y = -10;
-}
-if(startSide === 2){ // left
-x = -10;
-y = Math.random()*100;
-}
-if(startSide === 3){ // right
-x = 110;
-y = Math.random()*100;
-}
-
-el.style.left = x + "vw";
-el.style.top = y + "vh";
-
-container.appendChild(el);
-
-setTimeout(()=>{
-
-el.remove();
-
-},8000);
-
-}
-
-setInterval(createItem,400);
-
-</script>
-
 <h1>Hello Sweetu ✨</h1>
 
 <p class="intro">
