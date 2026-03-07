@@ -1,8 +1,10 @@
 const btn = document.getElementById("moreBtn");
-const message = document.getElementById("hiddenMessage");
+const msg = document.getElementById("hiddenMessage");
 
 btn.onclick = () => {
 
-message.style.opacity = "1";
+msg.classList.add("show");
 
-}
+btn.style.display = "none";
+
+};
