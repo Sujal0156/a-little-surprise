@@ -122,10 +122,8 @@ transform:translateY(0);
 /* ========================= */
 
 .poem-page{
-
 margin:0;
 font-family:'Poppins', sans-serif;
-
 background:linear-gradient(135deg,#ffd1dc,#ffe6f0);
 
 min-height:100vh;
@@ -135,9 +133,8 @@ justify-content:center;
 align-items:center;
 
 padding:40px;
-
+overflow-x:hidden;
 }
-
 
 /* poem card */
 
@@ -145,7 +142,7 @@ padding:40px;
 
 background:white;
 
-max-width:750px;
+max-width:700px;
 width:100%;
 
 padding:70px 60px;
@@ -158,10 +155,27 @@ box-shadow:
 0 30px 60px rgba(0,0,0,0.18),
 0 10px 25px rgba(0,0,0,0.08);
 
-animation:fadeIn 1.4s ease;
+/* book opening animation */
+transform:rotateY(90deg);
+animation:openBook 1.4s ease forwards;
 
 }
 
+/* book open effect */
+
+@keyframes openBook{
+
+0%{
+opacity:0;
+transform:rotateY(90deg);
+}
+
+100%{
+opacity:1;
+transform:rotateY(0deg);
+}
+
+}
 
 /* title */
 
@@ -169,16 +183,15 @@ animation:fadeIn 1.4s ease;
 
 font-family:'Dancing Script',cursive;
 
-font-size:56px;
+font-size:54px;
 
 color:#ff4d6d;
 
-margin-bottom:40px;
+margin-bottom:35px;
 
 text-shadow:0 5px 15px rgba(255,77,109,0.25);
 
 }
-
 
 /* poem text */
 
@@ -189,29 +202,26 @@ margin:auto;
 
 }
 
-
 .poem-text p{
 
 font-size:20px;
-
 line-height:2;
-
 color:#444;
 
 margin:6px 0;
 
 opacity:0;
-
 transform:translateY(10px);
 
 transition:all .5s ease;
 
 }
 
-
-/* next button */
+/* button */
 
 .nextBtn{
+
+display:inline-block;
 
 margin-top:45px;
 
@@ -236,72 +246,15 @@ box-shadow:0 12px 28px rgba(255,77,109,0.45);
 
 }
 
-
 .nextBtn:hover{
 
-transform:translateY(-4px) scale(1.05);
+transform:translateY(-4px) scale(1.07);
 
-box-shadow:0 18px 35px rgba(255,77,109,0.55);
+box-shadow:0 20px 40px rgba(255,77,109,0.55);
 
 }
-
 
 /* mobile */
-
-@media (max-width:600px){
-
-.poem-container{
-padding:45px 25px;
-}
-
-.poem-container h1{
-font-size:42px;
-}
-
-.poem-text p{
-font-size:18px;
-}
-
-}
-
-/* next button */
-
-.nextBtn{
-
-margin-top:40px;
-
-padding:16px 38px;
-
-border:none;
-
-border-radius:40px;
-
-background:linear-gradient(135deg,#ff4d6d,#ff1f4b);
-
-color:white;
-
-font-size:17px;
-font-weight:500;
-
-cursor:pointer;
-
-transition:all .35s ease;
-
-box-shadow:0 10px 25px rgba(255,77,109,0.45);
-
-}
-
-
-.nextBtn:hover{
-
-transform:translateY(-4px) scale(1.05);
-
-box-shadow:0 18px 35px rgba(255,77,109,0.55);
-
-}
-
-
-/* mobile support */
 
 @media (max-width:600px){
 
@@ -314,71 +267,6 @@ font-size:40px;
 }
 
 .poem-text p{
-font-size:18px;
-}
-
-}
-
-/* next button */
-
-.nextBtn{
-
-display:block;
-
-margin:40px auto 0;
-
-padding:14px 30px;
-
-border:none;
-
-border-radius:30px;
-
-background:#ff4d6d;
-
-color:white;
-
-font-size:16px;
-
-cursor:pointer;
-
-transition:all .3s ease;
-
-box-shadow:0 8px 18px rgba(255,77,109,0.35);
-
-}
-
-.nextBtn:hover{
-
-transform:translateY(-3px) scale(1.05);
-
-background:#ff1f4b;
-
-box-shadow:0 12px 24px rgba(255,77,109,0.5);
-
-}
-
-
-
-/* ========================= */
-/* MOBILE OPTIMIZATION */
-/* ========================= */
-
-@media (max-width:600px){
-
-.container,
-.poem-container{
-padding:40px 25px;
-}
-
-h1{
-font-size:42px;
-}
-
-.poem-title{
-font-size:38px;
-}
-
-.poem p{
 font-size:18px;
 }
 
