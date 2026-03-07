@@ -3,67 +3,197 @@
 body{
 margin:0;
 font-family:'Poppins', sans-serif;
-background:linear-gradient(135deg,#ffd1dc,#ffe6f0);
+background:linear-gradient(135deg,#ffd1dc,#ffe6f0,#ffd1dc);
+background-size:300% 300%;
+animation:bgMove 12s ease infinite;
+
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 }
 
+/* animated background */
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+
 /* main card */
 
 .container{
+
 background:white;
 padding:60px;
-border-radius:20px;
+border-radius:22px;
+
 text-align:center;
 max-width:550px;
-box-shadow:0 20px 40px rgba(0,0,0,0.15);
+width:90%;
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.15),
+0 5px 15px rgba(0,0,0,0.08);
+
 animation:fadeIn 1.5s ease;
+
 }
+
 
 /* title */
 
 h1{
 font-family:'Dancing Script', cursive;
-font-size:55px;
+font-size:56px;
 color:#ff4d6d;
-margin-bottom:10px;
+margin-bottom:12px;
+letter-spacing:1px;
 }
+
 
 /* intro text */
 
 .intro{
 font-size:18px;
 color:#555;
-line-height:1.6;
+line-height:1.7;
+max-width:420px;
+margin:auto;
 }
+
 
 /* button */
 
 .startBtn{
-margin-top:30px;
-padding:14px 30px;
+
+margin-top:32px;
+
+padding:14px 34px;
+
 border:none;
 border-radius:30px;
+
 background:#ff4d6d;
 color:white;
+
 font-size:17px;
+font-weight:500;
+
 cursor:pointer;
-transition:0.3s;
+
+transition:all .3s ease;
+
+box-shadow:0 8px 18px rgba(255,77,109,0.35);
+
 }
 
 .startBtn:hover{
-transform:scale(1.08);
+
+transform:translateY(-3px) scale(1.05);
+
 background:#ff1f4b;
+
+box-shadow:0 12px 24px rgba(255,77,109,0.5);
+
 }
+
 
 /* fade animation */
 
 @keyframes fadeIn{
+
 from{
 opacity:0;
-transform:translateY(30px);
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+
+/* ========================= */
+/* POEM PAGE */
+/* ========================= */
+
+.poem-container{
+
+background:white;
+
+max-width:700px;
+
+margin:80px auto;
+
+padding:60px;
+
+border-radius:22px;
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.15),
+0 5px 15px rgba(0,0,0,0.08);
+
+animation:fadeIn 1.4s ease;
+
+}
+
+
+.poem-title{
+
+font-family:'Dancing Script',cursive;
+font-size:50px;
+
+text-align:center;
+
+color:#ff4d6d;
+
+margin-bottom:40px;
+
+}
+
+
+.poem p{
+
+font-size:20px;
+
+line-height:1.9;
+
+text-align:center;
+
+color:#444;
+
+margin:8px 0;
+
+opacity:0;
+animation:appear 1s forwards;
+
+}
+
+
+/* smoother poem timing */
+
+.poem p:nth-child(1){animation-delay:0.3s;}
+.poem p:nth-child(2){animation-delay:0.6s;}
+.poem p:nth-child(3){animation-delay:0.9s;}
+.poem p:nth-child(4){animation-delay:1.2s;}
+.poem p:nth-child(5){animation-delay:1.5s;}
+.poem p:nth-child(6){animation-delay:1.8s;}
+.poem p:nth-child(7){animation-delay:2.1s;}
+.poem p:nth-child(8){animation-delay:2.4s;}
+.poem p:nth-child(9){animation-delay:2.7s;}
+.poem p:nth-child(10){animation-delay:3s;}
+
+
+@keyframes appear{
+from{
+opacity:0;
+transform:translateY(10px);
 }
 to{
 opacity:1;
@@ -71,63 +201,69 @@ transform:translateY(0);
 }
 }
 
-/* poem page */
 
-.poem-container{
-background:white;
-max-width:700px;
-margin:80px auto;
-padding:60px;
-border-radius:20px;
-box-shadow:0 20px 40px rgba(0,0,0,0.15);
-}
 
-.poem-title{
-font-family:'Dancing Script',cursive;
-font-size:50px;
-text-align:center;
-color:#ff4d6d;
-margin-bottom:40px;
-}
-
-.poem p{
-font-size:20px;
-line-height:1.9;
-text-align:center;
-color:#444;
-margin:6px 0;
-}
+/* next button */
 
 .nextBtn{
+
 display:block;
+
 margin:40px auto 0;
+
 padding:14px 30px;
+
 border:none;
+
 border-radius:30px;
+
 background:#ff4d6d;
+
 color:white;
+
 font-size:16px;
+
 cursor:pointer;
-transition:0.3s;
+
+transition:all .3s ease;
+
+box-shadow:0 8px 18px rgba(255,77,109,0.35);
+
 }
 
 .nextBtn:hover{
-transform:scale(1.08);
+
+transform:translateY(-3px) scale(1.05);
+
 background:#ff1f4b;
+
+box-shadow:0 12px 24px rgba(255,77,109,0.5);
+
+}
+
+
+
+/* ========================= */
+/* MOBILE OPTIMIZATION */
+/* ========================= */
+
+@media (max-width:600px){
+
+.container,
+.poem-container{
+padding:40px 25px;
+}
+
+h1{
+font-size:42px;
+}
+
+.poem-title{
+font-size:38px;
 }
 
 .poem p{
-opacity:0;
-animation:appear 1s forwards;
+font-size:18px;
 }
 
-.poem p:nth-child(1){animation-delay:0.3s;}
-.poem p:nth-child(2){animation-delay:0.6s;}
-.poem p:nth-child(3){animation-delay:0.9s;}
-.poem p:nth-child(4){animation-delay:1.2s;}
-
-@keyframes appear{
-to{
-opacity:1;
-}
 }
