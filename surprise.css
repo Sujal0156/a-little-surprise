@@ -96,3 +96,25 @@ transform:translateY(0);
 }
 
 }
+
+.surprise-page{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+}
+
+.surprise-box{
+background:white;
+padding:60px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+max-width:600px;
+}
+
+.surprise-text{
+font-size:26px;
+color:#ff4d6d;
+margin-top:20px;
+}
