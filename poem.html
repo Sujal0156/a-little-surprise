@@ -68,5 +68,27 @@
 </a>
 
 </div>
+<script>
 
+const lines = document.querySelectorAll(".poem-text p");
+
+let i = 0;
+
+function showNextLine(){
+
+if(i < lines.length){
+
+lines[i].style.opacity = "1";
+
+i++;
+
+setTimeout(showNextLine, 800);
+
+}
+
+}
+
+window.onload = showNextLine;
+
+</script>
 </body>
