@@ -123,6 +123,7 @@ transform:translateY(0);
 
 .poem-page{
 margin:0;
+overflow-y:auto;
 font-family:'Poppins', sans-serif;
 background:linear-gradient(135deg,#ffd1dc,#ffe6f0);
 
