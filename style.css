@@ -70,3 +70,48 @@ opacity:1;
 transform:translateY(0);
 }
 }
+
+/* poem page */
+
+.poem-container{
+background:white;
+max-width:700px;
+margin:80px auto;
+padding:60px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.poem-title{
+font-family:'Dancing Script',cursive;
+font-size:50px;
+text-align:center;
+color:#ff4d6d;
+margin-bottom:40px;
+}
+
+.poem p{
+font-size:20px;
+line-height:1.9;
+text-align:center;
+color:#444;
+margin:6px 0;
+}
+
+.nextBtn{
+display:block;
+margin:40px auto 0;
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:#ff4d6d;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.nextBtn:hover{
+transform:scale(1.08);
+background:#ff1f4b;
+}
