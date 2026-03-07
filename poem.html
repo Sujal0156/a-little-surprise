@@ -72,6 +72,7 @@
 <script>
 
 const lines = document.querySelectorAll(".poem-text p");
+const card = document.getElementById("poemCard");
 
 let i = 0;
 
@@ -91,6 +92,8 @@ setTimeout(showNextLine,700);
 }
 
 window.onload = () => {
+
+card.classList.add("show");
 
 setTimeout(showNextLine,900);
 
